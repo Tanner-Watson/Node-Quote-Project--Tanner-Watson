@@ -1,0 +1,15 @@
+{
+  "name": "11---node_quote_project",
+  "version": "1.0.0",
+  "description": "Node Quote Project CIS_131 Fall 2024",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Tanner Watson",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
+}
