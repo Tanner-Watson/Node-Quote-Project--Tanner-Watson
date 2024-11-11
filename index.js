@@ -15,8 +15,7 @@ function getQuote() {
         .then(function (response) {
             var quote = response.data[0];
 
-            console.log(`Here's a motivational quote for you:`);
-            console.log(`"${quote.q}" - ${quote.a}`);
+            logQuote(quote.q, quote.a)
 
         }) // end of axios .then block
 
@@ -27,9 +26,29 @@ function getQuote() {
             //generate a random number between the array length, thats rounded to the nearest integer.
             const randomIndex = Math.floor(Math.random() * localQuotes.length);
             const randomQuote = localQuotes[randomIndex];
-            console.log(`Here's a motivational quote for you:`);
-            console.log(`"${randomQuote.quote}" - ${randomQuote.author}`);
+            logQuote(randomQuote.quote, randomQuote.author);
         }); // end of axios 
+}
+
+
+//function to log quotes with custom formatting
+// Function to log quotes with custom formatting
+function logQuote(quote, author) {
+    // add border line
+    console.log('~'.repeat(70));
+    // add blank line
+    console.log('');
+    console.log('** "Here\'s a motivational quote for you:" **');
+    // add blank line
+    console.log('');
+    console.log(`"${quote}"`);
+    console.log(`- ${author}`);
+    // add blank line
+    console.log('');
+    // another border line
+    console.log('~'.repeat(70));
+    // add blank line
+    console.log('');
 }
 
 getQuote();
